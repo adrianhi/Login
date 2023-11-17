@@ -1,0 +1,80 @@
+* {
+  user-select: none;
+}
+
+.login,
+.Register {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  font-size: 20px;
+}
+
+input {
+  border: none;
+  padding: 20px;
+}
+
+.btn {
+  border: 2px solid currentColor;
+  border-radius: 3rem;
+  color: black;
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+  width: 300px;
+  margin-bottom: 5px;
+  cursor:pointer;
+}
+
+.btn::after {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(213, 8, 171, 1) 0%,
+    rgba(121, 8, 213, 1) 88%
+  );
+  border-radius: 3rem;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  transform: translate(0, 0);
+}
+
+.btn:hover {
+  border: 2px solid transparent;
+  color: indigo;
+  transform: scale(1.05);
+  will-change: transform;
+  color: white;
+}
